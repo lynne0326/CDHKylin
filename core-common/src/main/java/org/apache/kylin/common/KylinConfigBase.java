@@ -634,4 +634,8 @@ abstract public class KylinConfigBase implements Serializable {
     public int getDimCountDistinctMaxCardinality() {
         return Integer.parseInt(getOptional("kylin.query.dim.distinct.max", "5000000"));
     }
+    
+    public String getPatchedFuzzyRowFilterVersion() {
+        return this.getOptional("kylin.hbase.filter.fuzzy.row.filter.version", "1.1.3");
+    }
 }
